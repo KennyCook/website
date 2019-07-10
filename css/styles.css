@@ -1,0 +1,105 @@
+/* h1 {
+    margin-bottom: 20px;
+} */
+
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+header h1 {
+    font-size: 64px;
+}
+
+.section {
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+}
+
+/* http://vclever.com/blog/how-to-style-a-heading-with-horizontal-lines-either-side-using-css/ */
+.section-header {
+    overflow: hidden;
+    text-align: center;
+   }
+   .section-header:before,
+   .section-header:after {
+    background-color: #333;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+   }
+   .section-header:before {
+    right: 0.5em;
+    margin-left: -50%;
+   }
+   .section-header:after {
+    left: 0.5em;
+    margin-right: -50%;
+   }
+
+.content-grid{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    /*grid-auto-rows: auto;*/
+    grid-column-gap: 2em;
+}
+
+.content-grid-item {
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: fit-content(100px) auto 1fr; */
+    grid-template-rows: auto auto auto 1fr;
+    justify-items: center;
+}
+
+.business-image {
+    max-height: 200px;
+    border: 1px solid black;
+}
+
+.game-icon {
+    max-height: 500px;
+    border-bottom: 3px solid black;
+}
+
+.game-button {
+    max-height: 50px;
+}
+
+.quote {
+    margin-bottom: 2em;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* .dark-background{
+    background-color: lightslategrey;
+}
+
+.light-background{
+    background-color: seashell;
+} */
