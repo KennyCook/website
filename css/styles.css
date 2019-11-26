@@ -1,6 +1,7 @@
-/* h1 {
-    margin-bottom: 20px;
-} */
+body {
+    background: url('../images/tex-gplaypattern.png');   /* texture from www.subtlepatterns.com */
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 p {
     font-size: 20px;
@@ -21,14 +22,30 @@ header {
 }
 
 header h1 {
+    font-size: 96px;
+}
+
+header h2 {
     font-size: 64px;
 }
 
+footer {
+    display: flex; 
+    justify-content: center;
+}
+
+footer .footer-img {
+    background: black; 
+    max-height: 64px; 
+    border-radius: 20%; 
+    padding: 10px;
+    margin: 0px 5px 0px 5px;
+}
+
+/* Custom classes */
 .section {
     margin-bottom: 50px;
     padding: 20px;
-    border: 2px solid darkgrey;
-    border-radius: 10px;
 }
 
 /* http://vclever.com/blog/how-to-style-a-heading-with-horizontal-lines-either-side-using-css/ */
@@ -61,18 +78,41 @@ header h1 {
 
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    /*grid-auto-rows: auto;*/
     grid-column-gap: 2em;
 }
 
-.content-grid-item {
+/* .content-grid-item {
     width: 100%;
     
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-rows: fit-content(100px) auto 1fr; */
     grid-template-rows: auto auto auto 1fr;
     justify-items: center;
+} */
+
+.content-grid-item {
+    width: 100%;
+    background-color: #fbfbfb;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* remove underline after icon links */
+.content-grid-item a {
+    text-decoration: none;
+}
+
+.content-grid-item h3 {
+    margin-bottom: 5px;
+}
+
+.content-grid-item p {
+    text-align: center;
 }
 
 .business-image {
@@ -80,13 +120,36 @@ header h1 {
     border: 1px solid black;
 }
 
-.game-icon {
-    max-height: 500px;
-    border-bottom: 3px solid black;
+.content-grid-item .game-icon-wrap {
+    max-height: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+    z-index: 1;
 }
 
-.game-button {
+.content-grid-item .game-icon-wrap img {
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+.content-grid-item .game-icon {
+    max-height: 400px;
+}
+
+.content-grid-item .game-button-tray {
+    position: absolute; 
+    bottom: 30px;
+    z-index: 2; 
+}
+
+.content-grid-item .game-button {
     max-height: 50px;
+    margin-left: 5px;
+    opacity: 0.1;
+}
+
+.content-grid-item #stay-gray {
+    opacity: 0.1;
 }
 
 .quote {
@@ -95,11 +158,3 @@ header h1 {
     font-style: italic;
     text-align: center;
 }
-
-/* .dark-background{
-    background-color: lightslategrey;
-}
-
-.light-background{
-    background-color: seashell;
-} */
